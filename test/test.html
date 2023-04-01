@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <title>Mocha Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
   </head>
   <body>
     <div id="mocha"></div>
-
+    <div id="target"></div>
     <script src="https://unpkg.com/chai/chai.js"></script>
     <script src="https://unpkg.com/mocha/mocha.js"></script>
 
@@ -16,6 +18,9 @@
       mocha.setup("bdd");
       mocha.checkLeaks();
     </script>
+    <script src="../autoComplete.js"></script>
+    <script src="../autocompHelper.js"></script>
+    <script src="../utils.js"></script>
     <script src="./autoComplete.test.js"></script>
     <script class="mocha-exec">
       mocha.run();

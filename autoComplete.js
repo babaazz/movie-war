@@ -22,8 +22,9 @@ const createAutoComplete = ({
   const onInput = async (event) => {
     const items = await fetchData(event.target.value);
 
-    resultsWrapper.innerHTML = "";
     dropdown.classList.add("is-active");
+
+    resultsWrapper.innerHTML = "";
 
     if (input.value === "") dropdown.classList.remove("is-active");
 
